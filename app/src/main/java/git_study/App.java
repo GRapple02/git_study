@@ -5,7 +5,7 @@ package git_study;
 
 public class App {
     public Boolean isHelloWorld(String text) {
-        return text.equals("Hello World");
+    return "Hello World".equals(text);
     }
 
     public int divideNumber() {
