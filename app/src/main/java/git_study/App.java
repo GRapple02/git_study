@@ -5,27 +5,27 @@ package git_study;
 
 public class App {
     public Boolean isHelloWorld(String text) {
-        return text.equals("Hello Wrold");
+        return text.equals("Hello Wrold");  //world 스펠링 
     }
 
     public int divideNumber() {
-        return 10 / 0;
+        return 10 / 2;      // 0으로 나누면 예외 발생함
     }
 
     public int findArray() {
         int[] arr = new int[3];
 
-        return arr[4];
+        return arr[3]; // 없는 배열에 접근
     }
 
     public int parseInt(String number) {
-        return Integer.parseInt(number);
+        return Integer.parseInt(number);  //숫자로 변환 불가
     }
 
     public void whileWithoutBreak() {
         int i = 0;
         while(true) {
-            System.out.println(i++);
+            System.out.println(i++); //무한 루프로 종료 조건 없음
         }
     }
 
@@ -36,7 +36,7 @@ public class App {
         System.out.println(app.isHelloWorld(text));
         System.out.println(app.divideNumber());
         System.out.println(app.findArray());
-        System.out.println(app.parseInt("text"));
-        app.whileWithoutBreak();
+        System.out.println(app.parseInt("text"));  //number로 안받음
+        app.whileWithoutBreak();    //프로그램이 종료되지 않음
     }
 }
