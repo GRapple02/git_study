@@ -5,26 +5,32 @@ package git_study;
 
 public class App {
     public Boolean isHelloWorld(String text) {
-        return text.equals("Hello Wrold");
+        return "Hello World".equals(text); // equals 의 앞에 null 값이 오지 않게
     }
 
     public int divideNumber() {
-        return 10 / 0;
+        return 0
+        //return 10 / 0; // 0으로 나눌 수 없음
     }
 
     public int findArray() {
         int[] arr = new int[3];
 
-        return arr[4];
+        return arr[2]; // 배열의 범위를 넘지 않게
     }
 
     public int parseInt(String number) {
-        return Integer.parseInt(number);
+        try{        // 숫자가 아닐경우 예외처리
+            return Integer.parseInt(number);
+        } catch (IOException e){
+            System.out.println(e);
+            return 0
+        }
     }
 
     public void whileWithoutBreak() {
         int i = 0;
-        while(true) {
+        while(i < 1) { // 종료 조건 생성
             System.out.println(i++);
         }
     }
