@@ -9,17 +9,17 @@ public class App {
     }
 
     public int divideNumber() {
-        return 10 / 1;
+        return 10 / 0;
     }
 
     public int findArray() {
         int[] arr = new int[3];
 
-        return arr[2];
+        return arr[4];
     }
 
     public int parseInt(String number) {
-        return Integer.parseInt("321");
+        return Integer.parseInt(number);
     }
 
     public void whileWithoutBreak() {
@@ -31,7 +31,7 @@ public class App {
 
     public static void main(String[] args) {
         App app = new App();
-        String text = "hello world";
+        String text = null;
 
         System.out.println(app.isHelloWorld(text));
         System.out.println(app.divideNumber());
