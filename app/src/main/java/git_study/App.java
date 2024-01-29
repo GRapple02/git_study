@@ -5,8 +5,10 @@ package git_study;
 
 public class App {
     public Boolean isHelloWorld(String text) {
-        return text.equals("Hello World");  //Hello World 로 o r 위치를 바꿈
+        // text가 null이 아니고 "Hello World"와 동일한지 비교 
+        return "Hello World".equals(text);  // Hello World 로 교체
     }
+    
 
     public int divideNumber() {
         return 10 / 2;  // 10/0에서 10/2로 바꿔 나누기 함수를 완성함
