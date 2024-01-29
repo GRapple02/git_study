@@ -5,26 +5,32 @@ package git_study;
 
 public class App {
     public Boolean isHelloWorld(String text) {
-        return text.equals("Hello Wrold");
+        // text가 null이 아니고 "Hello World"와 동일한지 비교 
+        return "Hello World".equals(text);  // Hello World 로 교체
     }
+    
 
     public int divideNumber() {
-        return 10 / 0;
+        return 10 / 2;  // 10/0에서 10/2로 바꿔 나누기 함수를 완성함
     }
 
-    public int findArray() {
-        int[] arr = new int[3];
-
-        return arr[4];
+    public int findArray() { 
+        int[] arr = new int[5];  // 배열의 인덱스는 0부터 시작 3에서 5로 변경
+        return arr[3];  // 4에서 3으로 변경
     }
 
-    public int parseInt(String number) {
-        return Integer.parseInt(number);
+    public int parseInt(String number) { // 문자열이 정수로 변환될 수 있는지 확인하지 않았음
+        try {
+            return Integer.parseInt(number);
+        } catch (NumberFormatException e) {
+            e.printStackTrace(); // 또는 다른 예외 처리 로직 추가
+            return 0; // 또는 기본값 반환
+        }
     }
 
-    public void whileWithoutBreak() {
-        int i = 0;
-        while(true) {
+    public void whileWithoutBreak() { 
+        int i = 0;  
+        while(i < 10) {  // 무한 루프 되기 때문에 i < 10으로 변경 종료하는 값을 추가
             System.out.println(i++);
         }
     }
@@ -32,11 +38,11 @@ public class App {
     public static void main(String[] args) {
         App app = new App();
         String text = null;
-
+        
         System.out.println(app.isHelloWorld(text));
         System.out.println(app.divideNumber());
         System.out.println(app.findArray());
-        System.out.println(app.parseInt("text"));
+        System.out.println(app.parseInt(text));
         app.whileWithoutBreak();
     }
 }
