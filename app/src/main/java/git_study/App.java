@@ -5,28 +5,32 @@ package git_study;
 
 public class App {
     public Boolean isHelloWorld(String text) {
-        return text.equals("Hello Wrold");
+    return "Hello World".equals(text);
     }
 
     public int divideNumber() {
-        return 10 / 0;
+        return 10 / 2;
     }
 
     public int findArray() {
-        int[] arr = new int[3];
-
+        int[] arr = new int[5];
         return arr[4];
     }
 
     public int parseInt(String number) {
+         try {
         return Integer.parseInt(number);
+    } catch (NumberFormatException e) {
+        System.err.println("Invalid number format");
+        return 0;  // Or handle the error in an appropriate way
+    }
     }
 
     public void whileWithoutBreak() {
         int i = 0;
-        while(true) {
-            System.out.println(i++);
-        }
+    while (i < 10) {  // Add a condition to break the loop
+        System.out.println(i++);
+    }
     }
 
     public static void main(String[] args) {
