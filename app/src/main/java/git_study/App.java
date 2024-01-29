@@ -4,11 +4,39 @@
 package git_study;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
+    public Boolean isHelloWorld(String text) {
+        return text.equals("Hello Wrold");
+    }
+
+    public int divideNumber() {
+        return 10 / 0;
+    }
+
+    public int findArray() {
+        int[] arr = new int[3];
+
+        return arr[4];
+    }
+
+    public int parseInt(String number) {
+        return Integer.parseInt(number);
+    }
+
+    public void whileWithoutBreak() {
+        int i = 0;
+        while(true) {
+            System.out.println(i++);
+        }
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        App app = new App();
+        String text = null;
+
+        System.out.println(app.isHelloWorld(text));
+        System.out.println(app.divideNumber());
+        System.out.println(app.findArray());
+        System.out.println(app.parseInt("text"));
+        app.whileWithoutBreak();
     }
 }
