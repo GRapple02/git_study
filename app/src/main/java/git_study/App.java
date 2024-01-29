@@ -5,33 +5,33 @@ package git_study;
 
 public class App {
     public Boolean isHelloWorld(String text) {
-        return text.equals("Hello Wrold");
+        return text.equals("Hello Wrold"); //txt null이면 에러 
     }
 
     public int divideNumber() {
-        return 10 / 0;
+        return 10 / 0; // 0은 못 나눔 
     }
 
     public int findArray() {
         int[] arr = new int[3];
 
-        return arr[4];
+        return arr[4]; // 1 
     }
 
     public int parseInt(String number) {
-        return Integer.parseInt(number);
+        return Integer.parseInt(number); //인트 아니면 에러 
     }
 
     public void whileWithoutBreak() {
         int i = 0;
         while(true) {
-            System.out.println(i++);
+            System.out.println(i++); //무한 루프
         }
     }
 
     public static void main(String[] args) {
         App app = new App();
-        String text = null;
+        String text = null; 
 
         System.out.println(app.isHelloWorld(text));
         System.out.println(app.divideNumber());
