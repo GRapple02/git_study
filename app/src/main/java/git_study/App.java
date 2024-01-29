@@ -19,7 +19,7 @@ public class App {
     }
 
     public int parseInt(String number) {
-        return Integer.parseInt("321");
+        return Integer.parseInt("3221");
     }
 
     public void whileWithoutBreak() {
