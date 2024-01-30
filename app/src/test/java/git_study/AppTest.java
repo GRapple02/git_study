@@ -6,14 +6,24 @@ package git_study;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.BeforeAll;
+
 class AppTest {
     @Test
-    public void appHasAGreeting() {
-        App app = new App();
-        assertTrue(app.isHelloWorld("Hello Wrold"));
-        assertEquals(app.divideNumber(5), 2);
-        assertNotNull(app.findArray());
-        assertEquals(app.parseInt("100"), 100);
-        assertEquals(app.whileMethod(10), 10);
+    public void testAppMethod() {
+        Calculator calculator = new Calculator();
+
+
+        // 더하기 테스트
+        assertEquals(calculator.addtion(10, 20), 30);
+
+        // 빼기 테스트
+        assertEquals(calculator.subtraction(30, 10), 20);
+
+        // 곱하기 테스트
+        assertEquals(calculator.multiplication(10, 20), 200);
+
+        // 나누기 테스트
+        assertEquals(calculator.division(20, 20), 1);
     }
 }
