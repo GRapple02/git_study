@@ -8,12 +8,16 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
     @Test
-    public void appHasAGreeting() {
-        App app = new App();
-        assertTrue(app.isHelloWorld("Hello Wrold"));
-        assertEquals(app.divideNumber(5), 2);
-        assertNotNull(app.findArray());
-        assertEquals(app.parseInt("100"), 100);
-        assertEquals(app.whileMethod(10), 10);
+    public void testAppMethod() {
+        Calculator calculator = new Calculator();
+
+        assertEquals(calculator.addtion(10, 20));
+
+        assertEquals(calculator.subtraction(30, 10));
+
+        assertEquals(calculator.multiplication(10, 20));
+        
+        assertEquals(calculator.division(20, 20));
     }
 }
+

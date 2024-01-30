@@ -14,7 +14,7 @@ public class App {
 
     public int findArray() {
         int[] arr = new int[3];
-
+        
         return arr[2];
     }
 
