@@ -7,8 +7,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        // assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+    @Test
+    public void appHasAGreeting() {
+        App app = new App();
+        assertTrue(app.isHelloWorld("Hello Wrold"));
+        assertEquals(app.divideNumber(5), 2);
+        assertNotNull(app.findArray());
+        assertEquals(app.parseInt("100"), 100);
+        assertEquals(app.whileMethod(10), 10);
     }
 }

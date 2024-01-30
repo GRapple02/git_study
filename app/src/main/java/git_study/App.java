@@ -5,38 +5,34 @@ package git_study;
 
 public class App {
     public Boolean isHelloWorld(String text) {
-        return text.equals("Hello Wrold");
+        return "Hello Wrold".equals(text);
     }
 
-    public int divideNumber() {
-        return 10 / 0;
+    public int divideNumber(int number) {
+        return 10 / number;
     }
 
     public int findArray() {
         int[] arr = new int[3];
 
-        return arr[4];
+        return arr[2];
     }
 
     public int parseInt(String number) {
         return Integer.parseInt(number);
     }
 
-    public void whileWithoutBreak() {
+    public int whileMethod(int number) {
         int i = 0;
-        while(true) {
+        
+        while(i < number) {
             System.out.println(i++);
         }
+
+        return i;
     }
 
     public static void main(String[] args) {
         App app = new App();
-        String text = null;
-
-        System.out.println(app.isHelloWorld(text));
-        System.out.println(app.divideNumber());
-        System.out.println(app.findArray());
-        System.out.println(app.parseInt("text"));
-        app.whileWithoutBreak();
     }
 }
